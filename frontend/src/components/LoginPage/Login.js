@@ -29,25 +29,32 @@ const LoginFormPage = () => {
             <ul>
                 {errors.map((error, idx) => <li key={idx}>{error}</li>)}
             </ul>
+            <div className='form-group'>
             <label>
                 Username or Email
                 <input
                     type="text"
+                    className='form-control'
                     value={credential}
                     onChange={(e) => setCredential(e.target.value)}
                     required
-                />
+                    />
             </label>
+            </div>
+            <div className='form-group'>
             <label>
                 Password
                 <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
+                className='form-control'
+                type="password"
+
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
                 />
             </label>
-            <button type="submit">Log In</button>
+                </div>
+            <button className='btn btn-primary' type="submit">Log In</button>
         </form>
     );
 }
